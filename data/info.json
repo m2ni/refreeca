@@ -1,0 +1,16 @@
+{
+    website :
+    {
+        "title" : "refreeca",
+        "description" : "description",
+        "logo" :
+        {
+            "default" : "path",
+            "large" : "path",
+            "medium" : "path",
+            "small" : "path",
+            "favicon" : "path"
+        }
+    },
+
+}

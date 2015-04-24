@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>refreeca</title>
+
+        <link rel="stylesheet" type="text/css" href="common/style.css">
+        <link rel="stylesheet" type="text/css" href="common/layout.css">
+
+        <script type="text/javascript" src="common/main.js"></script>
+
+    </head>
+    <body>
+        <div id="top">
+            <div class="wrapper">
+                <header class="column dt t0 m0">
+                    <h1>refreeca</h1>
+                </header>
+                <nav  class="column dt2 tablet-hide mobile-hide">
+                    <ul>
+                        <li>main navigation</li>
+
+                    </ul>
+                </nav>
+                <p class="floatFix"></p>
+            </div>
+        </div>
+        <div id="main" class="container">
+            <ul class="itemlist">
+                <li class="video column l2 dq tt m5">
+                    <div>
+                        <img src="data/sam.svg">
+                        <h4>제목들어가는 영역</h4>
+                    </div>
+                </li>
+                <script>
+                    var elem = document.createElement('li');
+                        elem.className = 'video columm l2 dq tt m5';
+                    var contentWrapper = document.createElement('div');
+                        elem.appendChild(contentWrapper);
+                    return elem;
+                </script>
+            </ul>
+        </div>
+
+        <script type="text/javascript" src="common/main.js"></script>
+        <script>
+            sizeFix01();
+            window.addEventListener('resize', sizeFix01 ); // 최적화 픽스 요망
+
+            function sizeFix01(){
+                document.getElementById('main').style.marginTop = document.getElementById('top').offsetHeight + 'px';
+            }
+        </script>
+    </body>
+</html>
