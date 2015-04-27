@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>refreeca</title>
 
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
         <link rel="stylesheet" type="text/css" href="common/style.css">
         <link rel="stylesheet" type="text/css" href="common/layout.css">
 
@@ -16,7 +18,7 @@
                 <header class="column dt t0 m0">
                     <h1>refreeca</h1>
                 </header>
-                <nav  class="column dt2 tablet-hide mobile-hide">
+                <nav class="column dt2 tablet-hide mobile-hide">
                     <ul>
                         <li>main navigation</li>
 
@@ -27,20 +29,24 @@
         </div>
         <div id="main" class="container">
             <ul class="itemlist">
-                <li class="video column l2 dq tt m5">
-                    <div>
-                        <img src="data/sam.svg">
-                        <h4>제목들어가는 영역</h4>
-                        <p>배고파</p>
+                <li class="column l2 dq tt m0">
+                    <div class="video">
+                        <div class="thumb">
+                            <img src="data/sam.svg" alt="thumb">
+                        </div>
+                        <div class="desc">
+                            <p class="title">계란찜과 김치찌개 먹방</p>
+                            <p class="author">김이브</p>
+                            <div class="info">
+                                <p class="date">1995/06/18</p>
+                                <p class="like">32</p>
+                                <p class="view">610k</p>
+                                <p class="floatFix"></p>
+                            </div>
+                        </div>
                     </div>
                 </li>
-                <script>
-                    var elem = document.createElement('li');
-                        elem.className = 'video columm l2 dq tt m5';
-                    var contentWrapper = document.createElement('div');
-                        elem.appendChild(contentWrapper);
-                    return elem;
-                </script>
+                <p class="floatFix"></p>
             </ul>
         </div>
 
@@ -51,6 +57,16 @@
 
             function sizeFix01(){
                 document.getElementById('main').style.marginTop = document.getElementById('top').offsetHeight + 'px';
+            }
+
+            itemlistFix();
+            window.addEventListener('resize', itemlistFix);
+
+            function itemlistFix(){
+                var elem = document.querySelectorAll('.video');
+                for( var i=0; i<elem.length; i++ ){
+                    elem[i].childNodes[3].style.height = elem[i].childNodes[1].offsetHeight + 'px';
+                }
             }
         </script>
     </body>
