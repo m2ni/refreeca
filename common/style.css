@@ -73,7 +73,7 @@ ul.itemlist li .video{position:relative;background:#fff;border-radius:1px;}
     div.desc p{margin: 0; padding: 0 5px;line-height: 1;}
     div.desc p.title{font-size: 1.25em; margin-bottom: 5px;}
     div.desc p.author{font-size: 0.825em; opacity: 0.6;}
-    div.desc div.info{position: absolute; bottom: 0; width: 95%;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+    div.desc div.info{position: absolute; bottom: 0; width: 95%;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;} /* NOTE : 가로크기 픽스요망 */
     div.desc div.info p.date{float: left;}
     div.desc div.info p.like{float: right;}
     div.desc div.info p.view{float: right;}
