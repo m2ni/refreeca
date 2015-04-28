@@ -1,6 +1,8 @@
 // javascript document
 
 var main = {
+    info : {
+    },
     create : function(){
         if ( main.created ){
             return false;
