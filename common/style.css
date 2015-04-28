@@ -77,7 +77,9 @@ ul.itemlist li .video{position:relative;background:#fff;border-radius:2px;}
     div.info p{line-height:1;font-family:'Exo 2', sans-serif;font-size:0.825em;}
     div.info p.date{float: left;}
     div.info p.like{float: right;}
+    div.info p.like::before{content:url(../data/like.png);;margin-right:5px;vertical-align:middle;}
     div.info p.view{float: right;margin-right:10px;}
+    div.info p.view::before{content:url(../data/view.png);margin-right:5px;vertical-align:middle;}
 
 }
 @media only screen and (min-width: 641px){
