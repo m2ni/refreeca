@@ -64,7 +64,7 @@ nav ul li{display:inline-block;padding:14px 10px;}
 
 ul.itemlist{margin:0;padding:2.5px 0;list-style:none;}
 ul.itemlist li{position: relative;}
-ul.itemlist li .video{position:relative;background:#ffffff;border-radius:2px;}
+ul.itemlist li .video{position:relative;background:#ffffff;border-radius:2px;box-shadow:0px 0px 5px #ccc;}
 
 div.thumb{}
 div.thumb img{min-width:100%;max-width: 100%; height: inherit; vertical-align: middle; position: relative;}
@@ -78,9 +78,9 @@ div.info{position:absolute;bottom:0;right:0;padding:5px 10px;box-sizing:border-b
 div.info p{line-height:1;font-family:'Exo 2', sans-serif;font-size:0.825em;}
 div.info p.date{float: left;}
 div.info p.like{float: right;margin-right:10px;}
-div.info p.like::before{content:url(../data/like.png);;margin-right:5px;vertical-align:middle;}
+div.info p.like::before{content:url(./like.png);;margin-right:5px;vertical-align:middle;}
 div.info p.view{float: right;}
-div.info p.view::before{content:url(../data/view.png);margin-right:5px;vertical-align:middle;}
+div.info p.view::before{content:url(./view.png);margin-right:5px;vertical-align:middle;}
 
 @media only screen and (max-width: 640px){
     ul.itemlist{padding:2.5px 2.5px;}
