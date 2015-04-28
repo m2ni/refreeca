@@ -13,7 +13,7 @@ h2{font-size:2em;}
 h3{font-size:1.5em;}
 h4{font-size:1.25em;}
 h5{font-size:0.938em;opacity:0.9;}
-p{margin:0;font-size:0.938em;line-height:1.75;}
+p{margin:0;font-size:0.938em;}
 
 .container{width:100%;position:relative;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
 .wrapper{max-width:1120px;position:relative;margin:0 auto;}
@@ -69,6 +69,11 @@ ul.itemlist li .video{position:relative;background:#ffffff;border-radius:2px;}
 div.thumb{}
 div.thumb img{min-width:100%;max-width: 100%; height: inherit; vertical-align: middle; position: relative;}
 
+div.desc{position:relative;padding:10px 10px 0 10px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}}
+div.desc p{margin:0;line-height:1;}
+div.desc p.title{margin-bottom:5px;}
+div.desc p.author{font-size:0.825em;opacity:0.6;}
+
 div.info{position:absolute;bottom:0;right:0;padding:5px 10px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;background:#eee;}
 div.info p{line-height:1;font-family:'Exo 2', sans-serif;font-size:0.825em;}
 div.info p.date{float: left;}
@@ -79,15 +84,15 @@ div.info p.view::before{content:url(../data/view.png);margin-right:5px;vertical-
 
 @media only screen and (max-width: 640px){
     div.thumb{width:30%;/*썸네일비율*/position: absolute; top: 0; left: 0;}
-    div.desc{width:70%;/*썸네일비율*/position:relative;margin-left:30%;/*썸네일비율*/padding:10px 10px 0 10px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
-    div.desc p{margin:0;line-height:1;}
-    div.desc p.title{font-size:1.25em;margin-bottom:10px;}
-    div.desc p.author{font-size:0.825em;opacity:0.6;}
+    div.desc{width:70%;margin-left:30%;}
+    div.desc .title{font-size:1.25em;}
     div.info{width:70%;/*썸네일비율*/}
 
 }
 @media only screen and (min-width: 641px){
     div.thumb{width:100%;/*썸네일비율*/position:relative;}
+    div.desc{width:100%;}
+    div.desc .title{font-size:1.5em;}
     div.info{width:100%;}
 
 }
