@@ -63,7 +63,7 @@ nav ul li{display:inline-block;padding:14px 10px;}
 /* local */
 
 ul.itemlist{margin:0;padding:2.5px 0;list-style:none;}
-ul.itemlist li{position: relative;padding:5px 10px;}
+ul.itemlist li{position: relative;}
 ul.itemlist li .video{position:relative;background:#ffffff;border-radius:2px;}
 
 div.thumb{}
@@ -83,6 +83,8 @@ div.info p.view{float: right;}
 div.info p.view::before{content:url(../data/view.png);margin-right:5px;vertical-align:middle;}
 
 @media only screen and (max-width: 640px){
+    ul.itemlist{padding:2.5px 2.5px;}
+    ul.itemlist li{padding:5px 10px;}
     div.thumb{width:30%;/*썸네일비율*/position: absolute; top: 0; left: 0;}
     div.desc{width:70%;margin-left:30%;}
     div.desc .title{font-size:1.25em;}
@@ -90,6 +92,8 @@ div.info p.view::before{content:url(../data/view.png);margin-right:5px;vertical-
 
 }
 @media only screen and (min-width: 641px){
+    ul.itemlist{padding:2.5px;}
+    ul.itemlist li{padding:5px;}
     div.thumb{width:100%;/*썸네일비율*/position:relative;}
     div.desc{width:100%;}
     div.desc .title{font-size:1.5em;}

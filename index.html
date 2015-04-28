@@ -89,30 +89,53 @@
                         </div>
                     </div>
                 </li>
+
+                <li class="column l2 dq tt m0">
+                    <div class="video">
+                        <div class="thumb">
+                            <img src="data/sam.svg" alt="thumb">
+                        </div>
+                        <div>
+                            <div class="desc">
+                                <p class="title">계란찜과 김치찌개 먹방</p>
+                                <p class="author">김이브</p>
+                            </div>
+                            <div class="info">
+                                <p class="date">2022/06/18</p>
+                                <p class="view">610k</p>
+                                <p class="like">32</p>
+                                <p class="floatFix"></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <p class="floatFix"></p>
             </ul>
         </div>
 
         <script type="text/javascript" src="common/main.js"></script>
         <script>
-            sizeFix01();
-            window.addEventListener('resize', sizeFix01 ); // 최적화 픽스 요망
-
-            function sizeFix01(){
-                document.getElementById('main').style.marginTop = document.getElementById('top').offsetHeight + 'px';
-            }
 
             window.onload = function(){
                 itemlistFix();
+                document.getElementById('main').style.marginTop = document.getElementById('top').offsetHeight + 'px';
             }
             window.addEventListener('resize', itemlistFix);
 
             function itemlistFix(){
                 var elem = document.querySelectorAll('.video');
-                for( var i=0; i<elem.length; i++ ){
-                    elem[i].childNodes[3].style.height = elem[i].childNodes[1].clientHeight + 'px';
+                console.log(layout.getScreenType());
+                if( window.innerWidth < 640){
+                    for( var i=0; i<elem.length; i++ ){
+                        elem[i].childNodes[3].style.height = elem[i].childNodes[1].clientHeight + 'px';
+                    }
+                } else {
+                    for( var i=0; i<elem.length; i++ ){
+                        elem[i].childNodes[3].style.height = elem[i].childNodes[1].clientHeight / 2 + 'px';
+                    }
                 }
             }
+
         </script>
     </body>
 </html>
