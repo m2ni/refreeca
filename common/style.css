@@ -52,19 +52,19 @@ p{margin:0;font-size:0.938em;line-height:1.75;}
 #top{z-index:1000;width:100%;position:fixed;top:0;left:0;border-bottom:1px solid #ddd;background:rgba(255,255,255,0.9);}
 
 header{}
-header h1{padding:5px;font-size:2em;text-align:center;}
+header h1{padding:5px;font-size:2em;font-family: 'Rajdhani', sans-serif;text-align:center;}
 
 nav{}
 nav ul{margin:0;padding:0;list-style:none;}
 nav ul li{display:inline-block;padding:14px 10px;}
 
-#main{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background: #ddd;}
+#main{padding:2.5px 0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background: #ddd;}
 
 /* local */
 
-ul.itemlist{margin:0;padding:5px 0;list-style:none;}
+ul.itemlist{margin:0;padding:2.5px 0;list-style:none;}
 ul.itemlist li{position: relative;padding:5px 10px;}
-ul.itemlist li .video{position:relative;background:#fff;border-radius:2px;}
+ul.itemlist li .video{position:relative;background:#ffffff;border-radius:2px;}
 
 @media only screen and (max-width: 640px){
     div.thumb{width:30%;/*썸네일비율*/position: absolute; top: 0; left: 0;}
@@ -88,4 +88,9 @@ ul.itemlist li .video{position:relative;background:#fff;border-radius:2px;}
 #itemlist-category{}
 #itemlist-videos{}
 #itemlist-mini{}
+
+/* box */
+
+.box-alert{padding:2.5px 0;}
+.box-alert p{padding:10px;line-height:1.5;background:#fff;font-size:0.875em;}
 
