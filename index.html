@@ -31,7 +31,7 @@
             <div class="box-alert">
                 <p>본 사이트는 공사중인 웹사이트 입니다. 자세한 기술사항은 https://github.com/m2ni/refreeca를 참조하십시오.</p>
             </div>
-            <ul class="itemlist">
+            <ul id="videolist" class="itemlist">
                 <li class="column l2 dq tt m0">
                     <div class="video">
                         <div class="thumb">
@@ -115,6 +115,8 @@
         <script type="text/javascript" src="common/main.js"></script>
         <script>
 
+            new refreeca.create();
+
             window.onload = function(){
                 itemlistFix();
                 document.getElementById('main').style.marginTop = document.getElementById('top').offsetHeight + 'px';
@@ -123,7 +125,6 @@
 
             function itemlistFix(){
                 var elem = document.querySelectorAll('.video');
-                console.log(layout.getScreenType());
                 if( window.innerWidth < 640){
                     for( var i=0; i<elem.length; i++ ){
                         elem[i].childNodes[3].style.height = elem[i].childNodes[1].clientHeight + 'px';
