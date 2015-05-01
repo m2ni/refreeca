@@ -135,11 +135,11 @@
                 var elem = document.querySelectorAll('.video');
                 if( window.innerWidth < 640){
                     for( var i=0; i<elem.length; i++ ){
-                        elem[i].childNodes[3].style.height = elem[i].childNodes[1].clientHeight + 'px';
+                        elem[i].children[1].style.height = elem[i].children[0].clientHeight + 'px';
                     }
                 } else {
                     for( var i=0; i<elem.length; i++ ){
-                        elem[i].childNodes[3].style.height = elem[i].childNodes[1].clientHeight / 2 + 'px';
+                        elem[i].children[1].style.height = elem[i].children[0].clientHeight / 2 + 'px';
                     }
                 }
             }
