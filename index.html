@@ -115,6 +115,7 @@
         </div>
 
         <script type="text/javascript" src="./lib/js/main.js"></script>
+        <script type="text/javascript" src="./lib/js/video.js"></script>
         <script type="text/javascript" src="./lib/js/bj.js"></script>
         <script type="text/javascript" src="./lib/js/isotope.js"></script>
         <script>
@@ -135,7 +136,7 @@
                     }
                 } else {
                     for( var i=0; i<elem.length; i++ ){
-                        elem[i].children[1].style.height = elem[i].children[0].clientHeight / 2 + 'px';
+                        elem[i].children[1].style.height = elem[i].children[0].clientWidth * 0.6 + 'px';
                     }
                 }
             }
