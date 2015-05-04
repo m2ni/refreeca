@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>채널아이디 뱉는 프로그램</title>
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="./common/style.css">
+        <link rel="stylesheet" type="text/css" href="./common/layout.css">
+
+        <style>
+            body{padding:10px;}
+            input#input, button{display:inline-block; float:left;font-family: 'Nanum Gothic', sans-serif;}
+            input#input{padding:10px;font-size:2em;}
+            button{background:none;border-radius:0px;border:1px solid #ddd;margin-left:10px;transition:200ms;padding:10px;}
+            button:hover{background:#ddd;color:#fff;}
+            button:active{background:#888;}
+
+            ul{}
+            ul li{margin-bottom:10px;}
+            ul li p{line-height:1.5;}
+            ul li .title:before{content:'제목 : '}
+            ul li .author:before{content:'올린이 : '}
+            ul li .id:before{content:'채널아이디 : '}
+
+        </style>
+
+    </head>
+    <body>
+
+        <input type="text" name="input" id="input" onKeyup="javascript:events()">
+        <button onClick="javascript:events()">웬만하면 누르지마세요</button>
+        <p class="floatFix"></p>
+        <ul id="result">
+
+        </ul>
+
+
+        <script type="text/javascript" src="./lib/js/video.js"></script>
+        <script>
+
+            document.querySelector('button').style.height = document.getElementById('input').offsetHeight + 'px';
+
+            function events(){
+                var query = document.getElementById('input').value;
+                var rawData = video.loadlist(query);
+
+                if( document.getElementById('result').children.length != 0 ){
+                    document.getElementById('result').innerHTML = '';
+                }
+
+                for( var i=0; i<rawData.length; i++ ){
+                    var elem = document.createElement('li');
+                    var title = document.createElement('p');
+                        title.className = 'title';
+                        title.innerHTML = rawData[i].snippet.title;
+                    var author = document.createElement('p');
+                        author.className = 'author';
+                        author.innerHTML = rawData[i].snippet.channelTitle;
+                    var id = document.createElement('p');
+                        id.className = 'id';
+                        id.innerHTML = rawData[i].snippet.channelId;
+                    elem.appendChild(title);
+                    elem.appendChild(author);
+                    elem.appendChild(id);
+                    document.getElementById('result').appendChild(elem);
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
