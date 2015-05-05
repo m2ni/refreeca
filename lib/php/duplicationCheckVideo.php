@@ -28,6 +28,8 @@ if (!empty($_GET['q'])){
 
     } else {
 
+        echo 'error';
+
     }
 
 }
